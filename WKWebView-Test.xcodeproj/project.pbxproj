@@ -12,6 +12,8 @@
 		84868C181D996511001A709B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84868C161D996511001A709B /* Main.storyboard */; };
 		84868C1A1D996511001A709B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84868C191D996511001A709B /* Assets.xcassets */; };
 		84868C1D1D996511001A709B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84868C1B1D996511001A709B /* LaunchScreen.storyboard */; };
+		84868C251D9973D0001A709B /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84868C241D9973D0001A709B /* MyWebView.swift */; };
+		84868C271D9997F6001A709B /* hideNav.js in Resources */ = {isa = PBXBuildFile; fileRef = 84868C261D9997F5001A709B /* hideNav.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		84868C191D996511001A709B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84868C1C1D996511001A709B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84868C1E1D996511001A709B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84868C241D9973D0001A709B /* MyWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
+		84868C261D9997F5001A709B /* hideNav.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hideNav.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				84868C121D996511001A709B /* AppDelegate.swift */,
 				84868C141D996511001A709B /* ViewController.swift */,
+				84868C241D9973D0001A709B /* MyWebView.swift */,
+				84868C261D9997F5001A709B /* hideNav.js */,
 				84868C161D996511001A709B /* Main.storyboard */,
 				84868C191D996511001A709B /* Assets.xcassets */,
 				84868C1B1D996511001A709B /* LaunchScreen.storyboard */,
@@ -124,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84868C271D9997F6001A709B /* hideNav.js in Resources */,
 				84868C1D1D996511001A709B /* LaunchScreen.storyboard in Resources */,
 				84868C1A1D996511001A709B /* Assets.xcassets in Resources */,
 				84868C181D996511001A709B /* Main.storyboard in Resources */,
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84868C151D996511001A709B /* ViewController.swift in Sources */,
+				84868C251D9973D0001A709B /* MyWebView.swift in Sources */,
 				84868C131D996511001A709B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

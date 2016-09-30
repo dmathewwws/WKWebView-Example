@@ -1,26 +1,73 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WKWebView_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aZ-zD-Ea0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dN5-2W-bTE"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="fixedSpace" id="07S-n4-zhH"/>
+                                    <barButtonItem enabled="NO" title="&lt;" id="B9K-6u-TTk">
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="BYZ-38-t0r" id="tWf-AN-NjP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="xzy-Vq-o1z"/>
+                                    <barButtonItem enabled="NO" title="&gt;" id="Ndm-24-Z71">
+                                        <connections>
+                                            <action selector="forwardButtonPressed:" destination="BYZ-38-t0r" id="w1Z-Mk-0vB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2HM-7x-CP1"/>
+                                    <barButtonItem title="X" id="ZcY-cd-68j"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-wP-bze" customClass="MyWebView" customModule="WKWebView_Test" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gvl-qP-W7v"/>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1aZ-zD-Ea0" secondAttribute="trailing" id="9io-Zj-7xG"/>
+                            <constraint firstItem="1aZ-zD-Ea0" firstAttribute="top" secondItem="fhZ-wP-bze" secondAttribute="bottom" id="EGj-Hd-hys"/>
+                            <constraint firstItem="1aZ-zD-Ea0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LQb-aD-Pj8"/>
+                            <constraint firstItem="gvl-qP-W7v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dgj-wr-mrU"/>
+                            <constraint firstAttribute="trailing" secondItem="fhZ-wP-bze" secondAttribute="trailing" id="fYb-94-a7M"/>
+                            <constraint firstItem="gvl-qP-W7v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="18" id="fqL-7U-2gv"/>
+                            <constraint firstItem="fhZ-wP-bze" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kr9-Hk-cnU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1aZ-zD-Ea0" secondAttribute="bottom" id="p8C-I6-9ep"/>
+                            <constraint firstItem="fhZ-wP-bze" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t67-xc-jlh"/>
+                            <constraint firstAttribute="trailing" secondItem="gvl-qP-W7v" secondAttribute="trailing" id="z0Z-S7-C4F"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="B9K-6u-TTk" id="nlm-0c-qiK"/>
+                        <outlet property="forwardButton" destination="Ndm-24-Z71" id="s0a-0u-zJ7"/>
+                        <outlet property="myWebView" destination="fhZ-wP-bze" id="o1z-Ia-nZi"/>
+                        <outlet property="progressView" destination="gvl-qP-W7v" id="Unn-vU-ust"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.875" y="111.97183098591549"/>
         </scene>
     </scenes>
 </document>
